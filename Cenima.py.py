@@ -30,7 +30,12 @@ class Guest:
         else:
             print("Invalid amount.")
     def __str__(self):
-        return f"{self.name}:  {self.__tickets} tickets"
+        return f"{self.name}: {self.__tickets} tickets"
+def reserve(Hall,Guest,n):
+    if Hall.has_seats():
+        Guest.add_tickets(n)
+    else:
+        print("Hall is full.")
         
     
                                                                                                                      
